@@ -1,6 +1,6 @@
+import { addTransaction } from "../store/expenseSlice";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTransaction } from "../store/expenseSlice";
 
 const TransactionForm = () => {
   const [text, setText] = useState("");
@@ -33,10 +33,7 @@ const TransactionForm = () => {
     <div className="p-6 bg-white shadow-lg rounded-xl mt-6 flex flex-col items-center">
       <h2 className="text-lg font-semibold text-center">Add Transaction</h2>
 
-      <form
-        onSubmit={handleSubmit}
-        className="w-full max-w-sm flex flex-col gap-4 mt-4"
-      >
+      <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4 mt-4">
         <div className="flex justify-center gap-4">
           <button
             type="button"
